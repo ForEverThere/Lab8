@@ -1,1 +1,2 @@
-# Lab8
+# aircompany
+Project with "code smells" for refactoring
