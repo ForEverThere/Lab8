@@ -7,7 +7,7 @@ namespace Aircompany
 {
     public static class PlaneRegistry
     {
-        public static List<Plane> Planes = new List<Plane>()
+        public static readonly List<Plane> Planes = new List<Plane>()
         {
             new PassengerPlane("Boeing-737", 900, 12000, 60500, 164),
             new PassengerPlane("Boeing-737-800", 940, 12300, 63870, 192),

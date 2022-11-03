@@ -4,7 +4,7 @@ namespace Aircompany.Planes
 {
     public class PassengerPlane : Plane
     {
-        private int _passengersCapacity;
+        private readonly int _passengersCapacity;
         public PassengerPlane(string model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, int passengersCapacity)
             :base(model, maxSpeed, maxFlightDistance, maxLoadCapacity)
         {
@@ -12,8 +12,7 @@ namespace Aircompany.Planes
         }
         public override bool Equals(object obj)
         {
-            var plane = obj as PassengerPlane;
-            return plane != null && base.Equals(obj) && _passengersCapacity == plane._passengersCapacity;
+            return obj is PassengerPlane plane && base.Equals(obj) && _passengersCapacity == plane._passengersCapacity;
         }
         public override int GetHashCode()
         {

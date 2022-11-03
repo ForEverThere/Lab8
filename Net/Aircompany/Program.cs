@@ -7,7 +7,7 @@ using System.IO;
 
 namespace Aircompany
 {
-    class Program
+    internal static class Program
     {
         public static void Main(string[] args)
         {

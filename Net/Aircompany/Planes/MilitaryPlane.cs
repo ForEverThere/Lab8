@@ -4,7 +4,7 @@ namespace Aircompany.Planes
 {
     public class MilitaryPlane : Plane
     {
-        private MilitaryType _type;
+        private readonly MilitaryType _type;
         public MilitaryPlane(string model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType type) 
             : base(model, maxSpeed, maxFlightDistance, maxLoadCapacity)
         {
@@ -12,8 +12,7 @@ namespace Aircompany.Planes
         }
         public override bool Equals(object obj)
         {
-            var plane = obj as MilitaryPlane;
-            return plane != null && base.Equals(obj) && _type == plane._type;
+            return obj is MilitaryPlane plane && base.Equals(obj) && _type == plane._type;
         }
         public override int GetHashCode()
         {
